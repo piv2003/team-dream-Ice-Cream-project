@@ -1,0 +1,82 @@
+.modalll {
+  width: 280px;
+  height: 365px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 28px 30px;
+
+  border: 2px solid $acent-color;
+  border-radius: 10px;
+  background-color: $primery-text-color;
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+    height: 458px;
+  }
+}
+.modalll__title {
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: $third-text-color;
+  margin-bottom: 20px;
+  @media screen and(min-width:768px) {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+}
+
+.map-contein {
+  width: 224px;
+  height: 199px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    width: 448px;
+    height: 260px;
+  }
+}
+
+
+.modalll__map {
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+
+  @media screen and(min-width:768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.modalll_btn {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: $secondary-text-color;
+}
+
+.modalll__close-icon {
+  fill: currentColor;
+}
+
+.open-map {
+  display: inline-block;
+  margin-top: 24px;
+  @media screen and(min-width:768px) {
+      margin-top: 32px;
+  }
+}

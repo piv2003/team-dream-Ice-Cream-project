@@ -1,0 +1,352 @@
+.hero {
+    padding-top: 110px;
+
+    background-color: $bg-hero-color;
+
+    & .container {
+        position: relative;
+        height: 390px;
+
+        @include tablet {
+            height: 332px;
+        }
+
+        @include desktop {
+            height: 564px;
+        }
+    }
+
+    @include tablet {
+        padding-top: 125px;
+    }
+
+    @include desktop {
+        padding-top: 118px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 18px;
+        align-items: baseline;
+
+        @include tablet {
+            margin-bottom: 28px;
+        }
+
+        @include desktop {
+            margin-bottom: 42px;
+            gap: 34px;
+        }
+    }
+
+    &__heading {
+        max-width: 247px;
+        margin-bottom: 32px;
+
+        font-size: 26px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: calc(33 / 26);
+        font-family: $hero-font;
+        text-transform: uppercase;
+
+        &--accent {
+            font-size: 34px;
+
+            @include tablet {
+                font-size: 24px;
+            }
+
+            @include desktop {
+                font-size: 38px;
+            }
+        }
+
+        @include tablet {
+            max-width: 181px;
+            margin-bottom: 20px;
+
+            font-size: 18px;
+            line-height: calc(23 / 18);
+        }
+
+        @include desktop {
+            max-width: 367px;
+            margin-bottom: 40px;
+
+            font-size: 38px;
+            line-height: calc(48 / 38);
+        }
+    }
+
+    &__link {
+        padding-block: 15px;
+        cursor: url(../images/cursor.png), pointer;
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 8px;
+        line-height: calc(10 / 8);
+        letter-spacing: normal;
+
+        color: $acent-color;
+        transition: color 250ms ease-in-out;
+
+        &:hover {
+            color: $btn-focus-color;
+        }
+
+        &:focus {
+            color: $primery-text-color;
+        }
+
+        @include desktop {
+            font-size: 14px;
+            line-height: calc(17 / 14);
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+      left: 87px;
+
+        width: 49%;
+        max-width: 157px;
+
+        filter: drop-shadow(0 0 30px rgba(252, 252, 252, 0.44)) drop-shadow(0 0 20px rgba(252, 252, 252, 0.44));
+
+        @include tablet {
+            left: 405px;
+            max-width: 270px;
+        }
+
+        @include desktop {
+            left: 653px;
+            max-width: 447px;
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        max-height: 50px;
+        width: 100%;
+        max-width: 320px;
+
+        fill: $acent-color;
+        pointer-events: none;
+
+        @include tablet {
+            display: none;
+        }
+
+        &--tablet {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            display: none;
+            width: 768px;
+            height: 67px;
+
+            fill: $acent-color;
+            z-index: 0;
+            pointer-events: none;
+
+            @include tablet-only {
+                display: block;
+            }
+        }
+
+        &--desktop {
+            @media screen and (max-width: 1199px) {
+                display: none;
+            }
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 1200px;
+            height: 384px;
+
+            pointer-events: none;
+        }
+    }
+
+    &__tablet {
+        display: flex;
+        gap: 33px;
+
+        @include desktop {
+            gap: 14px;
+        }
+    }
+
+    &__plate {
+        position: relative;
+        width: 152px;
+
+        z-index: 1;
+
+        @include desktop {
+            width: 225px;
+            margin-bottom: 65px;
+        }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__text {
+        width: 151px;
+
+        font-weight: 400;
+        font-family: $main-font;
+        font-size: 12px;
+        line-height: calc(17 / 12);
+        letter-spacing: normal;
+
+        @include desktop {
+            width: 200px;
+            font-size: 14px;
+            line-height: calc(20 / 14);
+        }
+    }
+
+    &__arrows {
+        padding-block: 15px;
+        display: flex;
+        align-items: baseline;
+        transition: padding-bottom 200ms linear;
+        cursor: url(../images/cursor.png), pointer;
+
+        &:hover {
+            padding-bottom: 11px;
+        }
+
+        &:hover .hero__arrow {
+            width: 50px;
+            height: 19px;
+        }
+
+        &:focus .hero__arrow {
+            stroke-width: 2px;
+        }
+    }
+
+    &__arrow {
+        fill: $primery-text-color;
+        width: 40px;
+        height: 15px;
+
+        transition: width 200ms linear, height 200ms linear;
+    }
+
+    &__descr {
+        margin: auto 0;
+        padding-top: 27px;
+
+        @media screen and (max-width: 767.5px) {
+            display: none;
+        }
+    }
+
+    &__numbers {
+        position: absolute;
+        top: -10px;
+        right: 32px;
+
+        display: none;
+
+        text-align: right;
+
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: calc(10 / 8);
+        letter-spacing: normal;
+
+        @include tablet {
+            display: block;
+        }
+
+        @include desktop {
+            right: 16px;
+            top: 0;
+            font-size: 14px;
+            line-height: calc(17 / 14);
+        }
+
+        &--mb {
+            margin-bottom: 20px;
+
+            @include desktop {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__number {
+        display: block;
+
+        margin-bottom: 4px;
+
+        font-weight: 900;
+        font-size: 28px;
+        font-family: $main-font;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        color: $third-text-color;
+
+        @include desktop {
+            font-size: 46px;
+        }
+    }
+}
+.adaptive-btn {
+    background-color: rgba(0, 0, 0, 0);
+        border: 2px solid #f8d24e;
+        border-radius: 10px;
+        padding: 9px 31px;
+        transition-property: border-color;
+        transition-duration: .25s;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: $secondary-text-color;
+        cursor: url(../images/cursor.png), pointer;
+            
+
+    @media (max-width: 1199.5px) {
+        padding: 6px 10px;
+
+        font-weight: 600;
+        font-size: 8px;
+        line-height: calc(10 / 8);
+        letter-spacing: normal;
+    }
+}
+.adaptive-btn:hover {
+    border-color: #0a8817;
+}
+.adaptive-btn:focus {
+    color: #fcfcfc;
+    border-color: #0a8817;
+}
+
+
+
+.hero__dots, .hero__img {
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,129 @@
+<header class="header" id="home">
+  <div class="container header__container">
+    <a class="logo__link link" href="./index.html">
+      <img
+        class="logo__icon"
+        srcset="
+          ./images/logo/1-60.png     60w,
+          ./images/logo/1-60@2x.png 120w,
+          ./images/logo/2-48.png     48w,
+          ./images/logo/2-48@2x.png  96w,
+          ./images/logo/3-41.png     41w,
+          ./images/logo/2-48@2x.png  81w
+        "
+        sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (max-width: 767px) 41px, 100vw"
+        src="./images/logo/3-41.png"
+        alt="Ice cream logo"
+      />
+    </a>
+
+    <nav class="main-nav">
+      <ul class="main-nav__list main-nav__list--mobile list">
+        <li class="main-nav__item">
+          <a href="./index.html" class="main-nav__link link" aria-label="home"
+            >Home</a
+          >
+        </li>
+        <li class="main-nav__item">
+          <a href="#about" class="main-nav__link link" aria-label="about"
+            >How it’s made?</a
+          >
+        </li>
+        <li class="main-nav__item">
+          <a href="#products" class="main-nav__link link" aria-label="products"
+            >Our products</a
+          >
+        </li>
+        <li class="main-nav__item">
+          <a href="#contacts" class="main-nav__link link" aria-label="contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- start button mobile and tablet menu -->
+    <button
+      class="menu-btn js-open-menu"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="menu-btn__icon" width="32" height="32">
+        <use href="../src/images/sprite.svg#burger"></use>
+      </svg>
+    </button>
+    <!-- end button mobile and tablet menu -->
+
+    <button
+      type="button"
+      class="button header__btn js-open-modal"
+      aria-label="buy now"
+      data-buy-now-open
+    >
+      Buy now
+      <svg class="btn__arrow-icon" width="12" height="12">
+        <use href="../src/images/sprite.svg#btn-arrow"></use>
+      </svg>
+    </button>
+
+    <!-- header menu layout-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-btn-close js-close-menu">
+        <svg class="menu-btn__icon" width="32" height="32">
+          <use href="../src/images/sprite.svg#modal-close-btn-white"></use>
+        </svg>
+      </button>
+
+      <ul class="main-nav__list-mobile list">
+        <li class="main-nav__item-mobile">
+          <a
+            href="./index.html"
+            class="main-nav__link-mobile link"
+            data-nav-link
+            aria-label="home"
+            >Home</a
+          >
+        </li>
+        <li class="main-nav__item-mobile">
+          <a
+            href="#about"
+            class="main-nav__link-mobile link"
+            aria-label="about"
+            data-nav-link
+            >How it’s made?</a
+          >
+        </li>
+        <li class="main-nav__item-mobile">
+          <a
+            href="#products"
+            class="main-nav__link-mobile link"
+            aria-label="products"
+            data-nav-link
+            >Our products</a
+          >
+        </li>
+        <li class="main-nav__item-mobile">
+          <a
+            href="#contacts"
+            class="main-nav__link-mobile link"
+            aria-label="contact"
+            data-nav-link
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <button
+        type="button"
+        class="button header__btn-mobile"
+        aria-label="buy now"
+        data-buy-now-menu-open
+      >
+        Buy now
+        <svg class="btn__arrow-icon" width="12" height="12">
+          <use href="../src/images/sprite.svg#btn-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

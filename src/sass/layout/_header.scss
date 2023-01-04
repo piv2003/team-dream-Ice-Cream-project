@@ -1,0 +1,233 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $bg-hero-color;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+    padding-top: 8px;
+  }
+}
+
+.logo__link {
+  margin-right: auto;
+  cursor: url(../images/cursor.png), pointer;
+  transition: transform $animations;
+  z-index: 300;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 0;
+  }
+
+  &:focus {
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+}
+
+.logo__icon {
+  display: block;
+  height: 37px;
+
+  @media screen and (min-width: 768px) {
+    height: 44px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 65px;
+  }
+}
+.main-nav {
+  align-items: center;
+  display: flex;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  gap: 27px;
+  display: flex;
+}
+
+.main-nav__link {
+  padding-top: 22px;
+  padding-bottom: 17px;
+  display: block;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+
+  cursor: url(../images/cursor.png), pointer;
+  transition: color $animations, transform $animations;
+
+  &:hover {
+    color: $acent-color;
+  }
+
+  &:focus {
+    color: $bg-white-color;
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+  &:disabled {
+    color: $disable-color;
+  }
+}
+
+.menu-btn {
+  cursor: url(../images/cursor.png), pointer;
+  background-color: transparent;
+  border: none;
+  transition: transform $animations;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+}
+
+.header__btn {
+  margin-left: 32px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.btn__arrow-icon {
+  fill: none;
+  stroke: currentColor;
+  margin-left: 7px;
+  padding-bottom: 2px;
+  vertical-align: middle;
+}
+
+// burger menu
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px 12px 63px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #97af8d;
+  z-index: 200;
+  text-align: center;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+
+  @media screen and (min-width: 768px) {
+    background-color: #85a279;
+    padding: 140px 32px;
+  }
+}
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.menu-btn-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  min-height: 32px;
+  min-width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  margin-right: auto;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  cursor: url(../images/cursor.png), pointer;
+  border: none;
+  border-radius: 50%;
+  border-radius: 10px;
+  outline: none;
+  transition: transform $animations, box-shadow $animations;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scaleX(1.1) scaleY(1.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.main-nav__link-mobile {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: calc(39 / 32);
+
+  @media screen and (mix-width: 767px) {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: calc(59 / 48);
+  }
+
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+  }
+}
+
+.main-nav__item-mobile:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.header__btn-mobile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}

@@ -1,0 +1,113 @@
+.button {
+  padding: 12px 34px;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $third-text-color;
+  cursor: url(../images/cursor.png), pointer;
+  background-color: $acent-color;
+  outline: none;
+  transition: color $animations, background-color $animations, color $animations;
+
+  &:hover {
+    background-color: $btn-focus-color;
+  }
+
+  &:focus {
+    background-color: $btn-focus-color;
+    color: $bg-white-color;
+
+  }
+
+  &:disabled {
+    background-color: $disable-color;
+  }
+}
+
+
+// кнопка ФРАНШИЗА, що має прозорий фон
+.btn {
+  padding: 10px 44px;
+  margin: 0;
+  border: 2px solid $acent-color;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $third-text-color;
+  cursor: url(../images/cursor.png), pointer;
+  background-color: transparent;
+  transition: border-color $animations, color $animations;
+  outline: none;
+
+  &:hover {
+    border-color: $btn-focus-color;
+  }
+
+  &:focus {
+    border-color: $btn-focus-color;
+    color: $bg-white-color;
+  }
+
+  &:disabled {
+    border-color: $disable-color;
+  }
+}
+
+// ПОЗИЦІОНУВАННЯ і ЦЕНТРУВАННЯ СВГ іконки на кнопці (клас назначати на тег <svg>), наприклад
+// <button
+//       type="button"
+//       class="button"
+//       aria-label="buy now"
+//     >
+//       Buy now
+//       <svg class="btn__arrow-icon" width="12" height="12">
+//         <use href="../src/images/sprite.svg#btn-arrow"></use>
+//       </svg>
+//     </button>
+
+.btn__arrow-icon {
+  fill: currentColor;
+  stroke: currentColor;
+  margin-left: 7px;
+  padding-bottom: 2px;
+  vertical-align: middle;
+}
+
+// Посилання, що виглядають як кнопки, але не є кнопками (Products):
+// 1. Кнопка Products на планшетній та деcrтопній версії має АНАЛОГІЧНЕ оформлення
+// як кнопка класу .btn (можна задавати на тег <a class="btn")
+// 2. На мобільній версії:
+
+.btn-mobile-product {
+  padding: 6px 10px;
+  margin: 0;
+  border: 2px solid $acent-color;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 1.2;
+  color: $third-text-color;
+  cursor: url(../images/cursor.png), pointer;
+  background-color: transparent;
+  transition: border-color $animations, color $animations;
+  outline: none;
+
+  &:hover {
+    border-color: $btn-focus-color;
+  }
+
+  &:focus {
+
+    border-color: $btn-focus-color;
+    color: $bg-white-color;
+
+  }
+
+  &:disabled {
+    border-color: $disable-color;
+  }
+}

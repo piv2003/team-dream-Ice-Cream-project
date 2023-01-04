@@ -1,2 +1,23 @@
-@import './common';
-@import './example';
+@import './base/vars';
+@import './base/common';
+@import './base/visually-hidden';
+@import './base/mixins';
+@import './components/buttons';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
+@import './layout/modals';
+@import './layout/modal-video';
+@import './layout/modal__location';
+@import './layout/franchise-modal';
+@import './layout/modal-byu-now-two';
+
+
+
+

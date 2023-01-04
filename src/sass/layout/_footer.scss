@@ -1,0 +1,203 @@
+.footer {
+    position: relative;
+    background: $bg-hero-color;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 63px;
+    }
+    @media screen and (min-width: 768px) {
+      padding-bottom: 13px;
+    }
+    padding-bottom: 63px;
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .footer__base {
+    @include tablet {
+      display: flex;
+    }
+    @include desktop {
+      align-items: baseline;
+    }
+  }
+
+  .footer__upptitle-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-transform: uppercase;
+  
+    color: $pure-white-color;
+    @include tablet {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    @include desktop {
+      font-size: 30px;
+      line-height: 37px;
+    }
+    width: 280px;
+    @include tablet {
+      width: 352px;
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+  
+  .footer__title {
+    
+    margin-top: 16px;
+    
+    font-weight: 700;
+    font-size: 34px;
+    line-height: calc(41 / 34);
+    letter-spacing: normal;
+    text-transform: uppercase;
+  
+    color: $pure-white-color;
+  
+@media screen and (max-width: 767px) {
+  width: 200px;
+}
+@media screen and (min-width: 768px) {
+  width: 340px;
+}
+    
+
+    @include tablet {
+      margin-top: 9px;
+  
+      font-size: 48px;
+      line-height: 59px;
+      letter-spacing: 0.06em;
+    }
+    @include desktop {
+      width: 100%;
+      margin-top: 14px;
+      margin-bottom: 54px;
+  
+      font-size: 58px;
+      line-height: 71px;
+    }
+  }
+  .footer__second {
+@media screen and (max-width: 767px) {
+  margin-bottom: 40px;
+}
+    @include tablet {
+      margin-left: auto;
+      margin-top: 40px;
+    }
+  }
+  
+  .footer__list {
+    display: flex;
+    gap: 27px;
+    justify-content: right;
+  
+    @include tablet {
+      gap: 30px;
+    }
+  }
+  
+  .footer__svg {
+    color: $acent-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 32px;
+    width: 32px;
+    cursor: url(../images/cursor.png), pointer;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: $acent-color;
+    border: none;
+    transition: background-color $animations;
+    @include tablet {
+      height: 34px;
+      width: 34px;
+    }
+
+    &:hover {
+        background-color: $btn-focus-color;
+    }
+    &:hover .footer__icon {
+        fill: $pure-white-color;
+    }
+  }
+  
+  .footer__icon {
+    width: 18px;
+    height: 18px;
+  
+    fill: $bg-hero-color;
+
+    transition: fill $animations;
+     }
+
+
+
+  .footer__link {
+    cursor: url(../images/cursor.png), pointer;
+  }
+  
+  .footer__undertitle {
+    text-align: right;
+    margin-top: 38px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 186%;
+    letter-spacing: normal;
+    color: $pure-white-color;
+    @include desktop {
+        font-size: 16px;
+    }
+    @include tablet {
+      margin-top: 32px;
+    }
+  }
+  
+  .footer__undertitle-text {
+    color: $secondary-text-color;
+    @include tablet {
+      font-size: 14px;
+      line-height: 186%;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+  
+  .footer__border {
+    width: 100%;
+  
+    border: 1px solid #e1e1e1;
+  }
+  
+  .footer__undertitle-link {
+    width: 200px;
+  
+    margin-top: 16px;
+ 
+  
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 152%;
+    text-align: center;
+  
+    color: $dark-grey-color;
+    @include tablet {
+      width: 100%;
+      margin-top: 14px;
+      }
+  }
+
+  .fade-right {
+    margin-bottom: 42px;
+  }

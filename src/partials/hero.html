@@ -1,0 +1,92 @@
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__heading">ice cream made with <span>passion</span></h1>
+    <ul class="hero__buttons">
+      <li><a href="#products" class="adaptive-btn">Products</a></li>
+      <li><a href="#about" class="hero__link">How it's made?</a></li>
+    </ul>
+    <div class="hero__imgs">
+      <svg class="hero__dots">
+        <use href="./images/hero/dots.svg#dots-sm-1"></use>
+      </svg>
+      <svg class="hero__dots--tablet">
+        <use href="./images/hero/dots.svg#dots-md-1"></use>
+      </svg>
+      <img src="./images/hero/dots-lg.png" alt="" class="hero__dots--desktop" />
+      <picture class="hero__img">
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/hero/ice-main-455-lg.png    1x,
+            ./images/hero/ice-main-910-lg-2x.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/hero/ice-main-270-md.png"
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/hero/ice-main-170-sm.png    1x,
+            ./images/hero/ice-main-340-sm-2x.png 2x
+          "
+          type="image/png"
+        />
+        <img src="./images/hero/ice-main-170sm.png" alt="ice-cream" />
+      </picture>
+    </div>
+    <div class="hero__tablet">
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="./images/hero/cream-450-2x.png"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/hero/cream-304md-2x.png"
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/hero/cream-152md.png    1x,
+            ./images/hero/cream-304md-2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          src="./images/hero/cream-152md.png"
+          alt="ice-cream"
+          class="hero__plate"
+          id="plate"
+        />
+      </picture>
+      <div class="hero__descr">
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <a href="#about" class="hero__arrows" aria-label="about"> 
+          <svg class="hero__arrow">
+            <use href="./images/sprite.svg#arrow"></use> 
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__numbers">
+      <ul class="list">
+        <li class="hero__numbers--mb">
+          <span class="hero__number">16</span>cafes
+        </li>
+        <li class="hero__numbers--mb">
+          <span class="hero__number">23</span>food trucks
+        </li>
+      </ul>
+    </div>
+  </div>
+</section> 
+ 
